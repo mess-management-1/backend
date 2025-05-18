@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "echo 'No build step required'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "drizzle:generate": "drizzle-kit generate",
     "drizzle:migrate": "drizzle-kit migrate",
@@ -14,9 +15,13 @@
   "license": "ISC",
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.43.1",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^7.0.3",
     "nodemon": "^3.1.10",
     "pg": "^8.16.0",
     "postgres": "^3.4.5"

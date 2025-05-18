@@ -2,11 +2,18 @@
     const app = express();
     const dotenv = require('dotenv');
     const getRoutes  = require('./routes/getRoutes');
+    const authRoutes = require('./routes/authRoutes');
+    const cors = require('cors');
+    app.use(cors());
+    
     dotenv.config();
 
     const PORT = process.env.PORT;
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
 
     app.use("/users", getRoutes);
+    app.use('/auth', authRoutes);
 
     app.get("/", (req, res)=>{
         res.send(`server is running successfully on ${PORT} port`);
